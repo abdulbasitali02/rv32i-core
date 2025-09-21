@@ -29,5 +29,19 @@ module fetch #(
      * student below...
      */
 
+    // PC register
+    logic [AWIDTH-1:0] pc_q;
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            pc_q <= BASEADDR;
+        end else begin
+            pc_q <= pc_q + 32'd4;
+        end
+    end
+
+    // Output assignments
+    assign pc_o = {pc_q[AWIDTH-1:2], 2'b00}; // Ensure word alignment
+    assign insn_o = '0; // Instruction comes from memory in pd1
 endmodule : fetch
 				
