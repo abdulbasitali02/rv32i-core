@@ -1,0 +1,3 @@
+vcd file "/eecs/home/aali02/EECS-4201-project/project/pd0/test_pd.vcd"
+vcd add -r /top/* 
+run -all

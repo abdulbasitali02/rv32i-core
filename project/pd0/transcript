@@ -1,0 +1,22 @@
+# vsim work/ls 
+# Start time: 22:16:04 on Sep 11,2025
+# ** Error: (vsim-3170) Could not find 'work/ls'.
+#         Searched libraries:
+#             /eecs/home/aali02/EECS-4201-project/project/pd0/work
+# Error loading design
+# End time: 22:16:04 on Sep 11,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+ls
+# design
+# docs
+# transcript
+# verif
+# work
+cd work
+ls
+# _info
+# _lib1_2.qdb
+# _lib1_2.qpg
+# _lib1_2.qtl
+# _lib.qdb
+# _vmake
