@@ -33,81 +33,59 @@ module memory #(
   output logic [DWIDTH-1:0] data_o
 );
 
-  logic [DWIDTH-1:0] temp_memory [0:`MEM_DEPTH];
-  // Byte-addressable memory
-  logic [7:0] main_memory [0:`MEM_DEPTH];  // Byte-addressable memory
-  logic [AWIDTH-1:0] address;
-  assign address = addr_i - BASE_ADDR;
+    localparam int MEM_BYTES = `LINE_COUNT * (DWIDTH/8);
 
-  initial begin
-    $readmemh(`MEM_PATH, temp_memory);
-    // Load data from temp_memory into main_memory
-    for (int i = 0; i < `LINE_COUNT; i++) begin
-      main_memory[4*i]     = temp_memory[i][7:0];
-      main_memory[4*i + 1] = temp_memory[i][15:8];
-      main_memory[4*i + 2] = temp_memory[i][23:16];
-      main_memory[4*i + 3] = temp_memory[i][31:24];
-    end
-    $display("IMEMORY: Loaded %0d 32-bit words from %s", `LINE_COUNT, `MEM_PATH);
-  end
+	logic [DWIDTH-1:0] temp_memory [0:`LINE_COUNT - 1];
+   	// Byte-addressable memory
+  	logic [7:0] main_memory [0:MEM_BYTES - 1];  // Byte-addressable memory
+   	logic [AWIDTH-1:0] address;
+   	assign address = addr_i - BASE_ADDR;
+  	int i;
+ 
+   	initial begin
+        $readmemh(`MEM_PATH, temp_memory);
+        // Load data from temp_memory into main_memory
+		for (i = 0; i < `LINE_COUNT; i++) begin
+       	    main_memory[4*i]     = temp_memory[i][7:0];
+       		main_memory[4*i + 1] = temp_memory[i][15:8];
+       		main_memory[4*i + 2] = temp_memory[i][23:16];
+       		main_memory[4*i + 3] = temp_memory[i][31:24];
+     	end
+		$display("IMEMORY: Loaded %0d 32-bit words from %s", `LINE_COUNT, `MEM_PATH);
+	end
 
-  /*
-   * Process definitions to be filled by
-   * student below....
-   *
-   */
-
-  // Range Guard
-
-  logic in_range;
-  assign in_range = (addr_i >= BASE_ADDR) && (addr_i < (BASE_ADDR + `MEM_DEPTH));
-
-  // Safe Byte Read (Returns 0 on Out of bounds)
-  function automatic logic [7:0] read_byte(input logic [AWIDTH-1:0] a);
-    if (a < `MEM_DEPTH) read_byte = main_memory[a];
-    else read_byte = 8'h00;
-  endfunction
-
-  // Safe Byte Write (No operation on Out of bounds)
-  task automatic write_byte(input logic [AWIDTH-1:0] a, input logic [7:0] v);
-    if (a < `MEM_DEPTH) main_memory[a] = v;
-  `ifndef SYNTHESIS
-    else $display("WARNING: Write to out-of-bounds address 0x%08h ignored", a + BASE_ADDR);
-  `endif
-  endtask
-
-  // Combinational Read 32-bit Little Endian
-
-  always_comb begin
-    if (read_en_i && in_range) begin
-      data_o = {read_byte(address + 3),
-                read_byte(address + 2),
-                read_byte(address + 1),
-                read_byte(address)};
-    end else begin
-      data_o = '0;
-    end
-  end
-
-  //Synchronous Write on rising clk edge 32-bit Little Endian
-
-  always_ff @(posedge clk) begin
-    if (!rst && write_en_i && in_range) begin
-      write_byte(address,     data_i[7:0]);
-      write_byte(address + 1, data_i[15:8]);
-      write_byte(address + 2, data_i[23:16]);
-      write_byte(address + 3, data_i[31:24]);
-    end
-    
-  `ifndef SYNTHESIS
-    if (write_en_i && !in_range) begin
-      $warning("WARNING: Write to out-of-bounds address 0x%08h ignored", addr_i);
-    end
-
-    if (read_en_i && !in_range) begin
-      $warning("WARNING: Read from out-of-bounds address 0x%08h returns 0", addr_i);
-    end
-  `endif
-  end
-
+	always_comb begin
+	    data_o = '0; // default to zero
+        if (read_en_i) begin
+            if ($isunknown(addr_i)) begin
+                data_o = '0;
+            end else if ((addr_i >= BASE_ADDR) && (addr_i + 32'd3 < BASE_ADDR + MEM_BYTES)) begin
+                // Word-aligned fetch: little-endian assembly
+                data_o = {
+                          main_memory[address + 3],
+                          main_memory[address + 2],
+                          main_memory[address + 1],
+                          main_memory[address]
+                };
+            end else begin
+                data_o = 32'hDEAD_BEEF;
+                $display("IMEMORY: OOB read @0x%08h (mapped 0x%08h)", addr_i, address);
+            end
+        end
+  	end
+	
+	always_ff @(posedge clk) begin
+        if (write_en_i) begin
+            if ((addr_i >= BASE_ADDR) && (addr_i + 32'd3 < BASE_ADDR + MEM_BYTES)) begin
+                main_memory[address] <= data_i[7:0];
+                main_memory[address + 1] <= data_i[15:8];
+                main_memory[address + 2] <= data_i[23:16];
+                main_memory[address + 3] <= data_i[31:24];
+                $display("IMEMORY: Wrote 0x%08h to 0x%08h", data_i, addr_i);
+            end else begin
+                $display("IMEMORY: OOB write @0x%08h", addr_i);
+            end
+        end
+ 	end
+ 
 endmodule : memory
