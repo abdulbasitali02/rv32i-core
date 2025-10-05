@@ -88,4 +88,57 @@ module memory #(
         end
  	end
  
+  // Range Guard
+
+  logic in_range;
+  assign in_range = (addr_i >= BASE_ADDR) && (addr_i < (BASE_ADDR + `MEM_DEPTH));
+
+  // Safe Byte Read (Returns 0 on Out of bounds)
+  function automatic logic [7:0] read_byte(input logic [AWIDTH-1:0] a);
+    if (a < `MEM_DEPTH) read_byte = main_memory[a];
+    else read_byte = 8'h00;
+  endfunction
+
+  // Safe Byte Write (No operation on Out of bounds)
+  task automatic write_byte(input logic [AWIDTH-1:0] a, input logic [7:0] v);
+    if (a < `MEM_DEPTH) main_memory[a] = v;
+  `ifndef SYNTHESIS
+    else $display("WARNING: Write to out-of-bounds address 0x%08h ignored", a + BASE_ADDR);
+  `endif
+  endtask
+
+  // Combinational Read 32-bit Little Endian
+
+  always_comb begin
+    if (read_en_i && in_range) begin
+      data_o = {read_byte(address + 3),
+                read_byte(address + 2),
+                read_byte(address + 1),
+                read_byte(address)};
+    end else begin
+      data_o = '0;
+    end
+  end
+
+  //Synchronous Write on rising clk edge 32-bit Little Endian
+
+  always_ff @(posedge clk) begin
+    if (!rst && write_en_i && in_range) begin
+      write_byte(address,     data_i[7:0]);
+      write_byte(address + 1, data_i[15:8]);
+      write_byte(address + 2, data_i[23:16]);
+      write_byte(address + 3, data_i[31:24]);
+    end
+    
+  `ifndef SYNTHESIS
+    if (write_en_i && !in_range) begin
+      $warning("WARNING: Write to out-of-bounds address 0x%08h ignored", addr_i);
+    end
+
+    if (read_en_i && !in_range) begin
+      $warning("WARNING: Read from out-of-bounds address 0x%08h returns 0", addr_i);
+    end
+  `endif
+  end
+
 endmodule : memory
