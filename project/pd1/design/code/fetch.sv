@@ -28,7 +28,20 @@ module fetch #(
      * Process definitions to be filled by
      * student below...
      */
+    
+    logic [AWIDTH - 1:0] pc;
+      
+    always_ff @(posedge clk) begin 
+        if (rst) begin
+            pc <= BASEADDR;
+        end else begin
+            pc <= pc + 32'd4;
+        end
+    end
+       
+	assign pc_o = pc;
 
+endmodule : fetch
     // PC register
     logic [AWIDTH-1:0] pc_q;
 
