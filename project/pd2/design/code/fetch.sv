@@ -14,6 +14,8 @@
  * 2) DWIDTH wide instruction output insn_o
  */
 
+ `include "constants.svh"
+
 module fetch #(
     parameter int DWIDTH=32,
     parameter int AWIDTH=32,

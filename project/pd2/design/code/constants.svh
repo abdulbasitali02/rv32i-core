@@ -8,7 +8,7 @@
 `define CONSTANTS_SVH_
 
 parameter logic [31:0] ZERO = 32'd0;
-parameter logic [31:0] INSN_NOP 32'h00000013; 
+parameter logic [31:0] INSN_NOP = 32'h00000013; 
 parameter logic [31:0] IMEM_BASE_ADDR = 32'h01000000;
 
 
