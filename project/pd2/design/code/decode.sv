@@ -51,4 +51,42 @@ module decode #(
      * student below...
      */
 
+    logic [DWIDTH-1:0] pc_q;
+    logic [DWIDTH-1:0] insn_q;
+    logic [DWIDTH-1:0] imm_q;
+
+    // Register the inpurts to create decode stage pipeline registers
+    always_ff @(posedge clk) begin
+        if (rst) begin
+            pc_q <= ZERO;
+            insn_q <= INSN_NOP; // NOP instruction
+        end else begin
+            pc_q <= pc_i;
+            insn_q <= insn_i;
+        end
+    end
+
+    // Decode instruction fields from registered instruction
+    assign opcode_o = insn_q[6:0];
+    assign rd_o = insn_q[11:7];
+    assign funct3_o = insn_q[14:12];
+    assign rs1_o = insn_q[19:15];
+    assign rs2_o = insn_q[24:20];
+    assign shamt_o = insn_q[24:20];
+    assign funct7_o = insn_q[31:25];
+
+    // Immediate generation based on instruction type
+    igen #(
+        .DWIDTH(DWIDTH)
+    ) u_igen (
+        .insn_i(insn_q),
+        .imm_o(imm_q),
+        .opcode_i(opcode_o)
+    );
+
+    // Output assignments
+    assign pc_o = pc_q;
+    assign insn_o = insn_q;
+    assign imm_o = imm_q;
+
 endmodule : decode
