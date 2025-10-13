@@ -87,6 +87,7 @@ memory #(
     .rst(reset),
     .addr_i(imem_addr),
     .wdata_i(imem_wdata),
+    .data_i(imem_wdata),
     .read_en_i(imem_read_en),
     .write_en_i(imem_write_en),
     .data_o(imem_rdata)
