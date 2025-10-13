@@ -63,7 +63,7 @@ logic imem_write_en;
 fetch #(
     .DWIDTH(DWIDTH),
     .AWIDTH(AWIDTH),
-    .IMEM_BASE_ADDR(IMEM_BASE_ADDR),
+    .IMEM_BASE_ADDR(IMEM_BASE_ADDR)
 ) u_fetch (
     .clk(clk),
     .rst(reset),
