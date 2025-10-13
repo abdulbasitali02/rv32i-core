@@ -4,7 +4,7 @@
 
 
 
-module module tb_pd2;
+module tb_pd2;
 
 
 
