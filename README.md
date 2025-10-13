@@ -70,3 +70,9 @@ It adheres to the RISC-V ISA specification (RV32I base integer instruction set) 
 | **GTKWave**              | Waveform visualization                         |
 | **Icarus Verilog**       | Open-source simulation (Windows-compatible)    |
 
+
+🙏 Acknowledgment
+
+Special thanks to Professor Anirudh Kaushik from the Department of Electrical Engineering and Computer Science (EECS 4201),
+Lassonde School of Engineering, York University, for providing the base project framework and support that made this implementation possible.
+
