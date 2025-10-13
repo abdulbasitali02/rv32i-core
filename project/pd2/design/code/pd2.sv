@@ -63,7 +63,7 @@ logic imem_write_en;
 fetch #(
     .DWIDTH(DWIDTH),
     .AWIDTH(AWIDTH),
-    .BASEADDR(IMEM_BASE_ADDR)
+    .IMEM_BASE_ADDR(IMEM_BASE_ADDR),
 ) u_fetch (
     .clk(clk),
     .rst(reset),
@@ -81,7 +81,7 @@ assign imem_wdata = '0; // not used
 memory #(
     .AWIDTH(AWIDTH),
     .DWIDTH(DWIDTH),
-    .BASEADDR(IMEM_BASE_ADDR)
+    .IMEM_BASE_ADDR(IMEM_BASE_ADDR)
 ) u_imem (
     .clk(clk),
     .rst(reset),
