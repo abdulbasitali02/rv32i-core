@@ -19,7 +19,7 @@
 module fetch #(
     parameter int DWIDTH=32,
     parameter int AWIDTH=32,
-    parameter int BASEADDR=32'h01000000
+    parameter int IMEM_BASE_ADDR=32'h01000000
     )(
 	// inputs
 	input logic clk,
@@ -37,7 +37,7 @@ module fetch #(
       
     always_ff @(posedge clk) begin 
         if (rst) begin
-            pc <= BASEADDR;
+            pc <= IMEM_BASE_ADDR;
         end else begin
             pc <= pc + 32'd4;
         end

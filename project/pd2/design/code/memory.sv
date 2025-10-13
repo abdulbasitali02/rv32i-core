@@ -21,12 +21,12 @@
   // parameters
   parameter int AWIDTH = 32,
   parameter int DWIDTH = 32,
-  parameter logic [31:0] BASE_ADDR = 32'h01000000
+  parameter logic [31:0] IMEM_BASE_ADDR = 32'h01000000
 ) (
   // inputs
   input logic clk,
   input logic rst,
-  input logic [AWIDTH-1:0] addr_i = BASE_ADDR,
+  input logic [AWIDTH-1:0] addr_i = IMEM_BASE_ADDR,
   input logic [DWIDTH-1:0] data_i,
   input logic read_en_i,
   input logic write_en_i,
@@ -40,7 +40,7 @@
    	// Byte-addressable memory
   	logic [7:0] main_memory [0:MEM_BYTES - 1];  // Byte-addressable memory
    	logic [AWIDTH-1:0] address;
-   	assign address = addr_i - BASE_ADDR;
+   	assign address = addr_i - IMEM_BASE_ADDR;
   	int i;
  
    	initial begin
@@ -60,7 +60,7 @@
         if (read_en_i) begin
             if ($isunknown(addr_i)) begin
                 data_o = '0;
-            end else if ((addr_i >= BASE_ADDR) && (addr_i + 32'd3 < BASE_ADDR + MEM_BYTES)) begin
+            end else if ((addr_i >= IMEM_BASE_ADDR) && (addr_i + 32'd3 < IMEM_BASE_ADDR + MEM_BYTES)) begin
                 // Word-aligned fetch: little-endian assembly
                 data_o = {
                           main_memory[address + 3],
@@ -77,7 +77,7 @@
 	
 	always_ff @(posedge clk) begin
         if (write_en_i) begin
-            if ((addr_i >= BASE_ADDR) && (addr_i + 32'd3 < BASE_ADDR + MEM_BYTES)) begin
+            if ((addr_i >= IMEM_BASE_ADDR) && (addr_i + 32'd3 < IMEM_BASE_ADDR + MEM_BYTES)) begin
                 main_memory[address] <= data_i[7:0];
                 main_memory[address + 1] <= data_i[15:8];
                 main_memory[address + 2] <= data_i[23:16];
