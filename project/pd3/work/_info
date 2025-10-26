@@ -1,0 +1,419 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/eecs/home/aali02/rv32i-core/project/pd3/verif/scripts
+vbranch_control
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+DXx4 work 22 branch_control_sv_unit 0 22 h34^Q7_9cnSe6K5NDfhWZ1
+Z2 !s110 1761509787
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 b9O2S@if_BUOfZl4f2;Ez1
+Izh>;B^i6hUCkJEm@P>ekB3
+!s105 branch_control_sv_unit
+S1
+R0
+Z4 w1761508087
+Z5 8/eecs/home/aali02/rv32i-core/project/pd3/design/code/branch_control.sv
+Z6 F/eecs/home/aali02/rv32i-core/project/pd3/design/code/branch_control.sv
+!i122 2
+L0 21 45
+Z7 OV;L;2020.1;71
+31
+Z8 !s108 1761509787.000000
+!s107 /eecs/home/aali02/rv32i-core/project/pd3/verif/tests/tasks.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/pattern_check.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/pattern_dump.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/trace_dump.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/fields.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/tracegen.v|/eecs/home/aali02/rv32i-core/project/pd3/design//probes.svh|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/test_pd.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/design_wrapper.sv|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/clockgen.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/pd3.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/execute.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/register_file.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/decode.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/control.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/fetch.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/memory.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/igen.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/branch_control.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/constants.svh|
+Z9 !s90 -work|/eecs/home/aali02/rv32i-core/project/pd3/work|-suppress|7061|-sv|+incdir+/eecs/home/aali02/rv32i-core/project/pd3/design/code|+incdir+/eecs/home/aali02/rv32i-core/project/pd3/design/|+incdir+/eecs/home/aali02/rv32i-core/project/pd3/verif/tests|+define+MEM_PATH="/eecs/home/aali02/rv32i-core/project/pd3/verif/data/test1.x"|+define+TEST_VECTOR="/eecs/home/aali02/rv32i-core/project/pd3/verif/data/test_vector.x"|+define+MEM_DEPTH=1048576|+define+GEN_TRACE=0|+define+TRACE_FILE="test1.trace"|+define+LINE_COUNT=127|+define+PATTERN_FILE="/eecs/home/aali02/rv32i-core/project/pd3/verif/data/test1.pattern"|+define+PATTERN_LINE_COUNT=127|+define+PATTERN_DUMP_FILE="test1.dump"|+define+PATTERN_DUMP=0|+define+PATTERN_CHECK=0|+define+VCD_FILE="test1.vcd"|+define+TIMEOUT=50000|-stats=none|/eecs/home/aali02/rv32i-core/project/pd3/design/code/constants.svh|/eecs/home/aali02/rv32i-core/project/pd3/design/code/branch_control.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/igen.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/memory.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/fetch.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/control.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/decode.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/register_file.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/execute.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/pd3.sv|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/clockgen.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/design_wrapper.sv|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/test_pd.sv|
+!i113 1
+Z10 o-suppress 7061 -work /eecs/home/aali02/rv32i-core/project/pd3/work -sv
+Z11 !s92 -suppress 7061 -work /eecs/home/aali02/rv32i-core/project/pd3/work -sv +incdir+/eecs/home/aali02/rv32i-core/project/pd3/design/code +incdir+/eecs/home/aali02/rv32i-core/project/pd3/design/ +incdir+/eecs/home/aali02/rv32i-core/project/pd3/verif/tests +define+MEM_PATH=\"/eecs/home/aali02/rv32i-core/project/pd3/verif/data/test1.x\" +define+TEST_VECTOR=\"/eecs/home/aali02/rv32i-core/project/pd3/verif/data/test_vector.x\" +define+MEM_DEPTH=1048576 +define+GEN_TRACE=0 +define+TRACE_FILE=\"test1.trace\" +define+LINE_COUNT=127 +define+PATTERN_FILE=\"/eecs/home/aali02/rv32i-core/project/pd3/verif/data/test1.pattern\" +define+PATTERN_LINE_COUNT=127 +define+PATTERN_DUMP_FILE=\"test1.dump\" +define+PATTERN_DUMP=0 +define+PATTERN_CHECK=0 +define+VCD_FILE=\"test1.vcd\" +define+TIMEOUT=50000
+Z12 tCvgOpt 0
+Xbranch_control_sv_unit
+R1
+R2
+Vh34^Q7_9cnSe6K5NDfhWZ1
+r1
+!s85 0
+!i10b 1
+!s100 k4GNGhmVf5l1e1O=^QV=O1
+Ih34^Q7_9cnSe6K5NDfhWZ1
+!i103 1
+S1
+R0
+R4
+R5
+R6
+Z13 F/eecs/home/aali02/rv32i-core/project/pd3/design/code/constants.svh
+!i122 2
+Z14 L0 10 0
+R7
+31
+R8
+Z15 !s107 /eecs/home/aali02/rv32i-core/project/pd3/verif/tests/tasks.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/pattern_check.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/pattern_dump.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/trace_dump.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/fields.h|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/tracegen.v|/eecs/home/aali02/rv32i-core/project/pd3/design//probes.svh|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/test_pd.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/design_wrapper.sv|/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/clockgen.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/pd3.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/execute.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/register_file.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/decode.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/control.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/fetch.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/memory.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/igen.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/branch_control.sv|/eecs/home/aali02/rv32i-core/project/pd3/design/code/constants.svh|
+R9
+!i113 1
+R10
+R11
+R12
+vclockgen
+R1
+R2
+!i10b 1
+!s100 XGla>YnT?aHlG7Lg@<j9J1
+Z16 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I8VP=OQSc8@ZJa<Z3XZ9bF1
+R3
+Z17 !s105 register_file_sv_unit
+S1
+R0
+Z18 w1760290819
+8/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/clockgen.sv
+F/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/clockgen.sv
+!i122 2
+L0 11 39
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+Xconstants_svh_unit
+R1
+R2
+V`?@SZ6WgeDRUznm7<9cGK3
+r1
+!s85 0
+!i10b 1
+!s100 M;Af;M0Xd<X:Y6eGT>S7W3
+I`?@SZ6WgeDRUznm7<9cGK3
+!i103 1
+S1
+R0
+R4
+8/eecs/home/aali02/rv32i-core/project/pd3/design/code/constants.svh
+R13
+!i122 2
+R14
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+vcontrol
+R1
+DXx4 work 15 control_sv_unit 0 22 :[S2I8nBOQFXDR6cGJJ4U3
+R2
+R3
+r1
+!s85 0
+!i10b 1
+!s100 >F5A6lAiLCDP:N8Xk6zBU3
+IFEQ<7NFkZl;[fMQ[1hXOd1
+!s105 control_sv_unit
+S1
+R0
+R4
+Z19 8/eecs/home/aali02/rv32i-core/project/pd3/design/code/control.sv
+Z20 F/eecs/home/aali02/rv32i-core/project/pd3/design/code/control.sv
+!i122 2
+L0 28 169
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+Xcontrol_sv_unit
+R1
+R2
+V:[S2I8nBOQFXDR6cGJJ4U3
+r1
+!s85 0
+!i10b 1
+!s100 Q4>[^<DM9KfEcU^NDKfJ]0
+I:[S2I8nBOQFXDR6cGJJ4U3
+!i103 1
+S1
+R0
+R4
+R19
+R20
+R13
+!i122 2
+R14
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+vdecode
+R1
+DXx4 work 14 decode_sv_unit 0 22 D4CKLfLShH[VESYCk4aiA1
+R2
+R3
+r1
+!s85 0
+!i10b 1
+!s100 d?W>6?lV_SW<lmY]CQ49<0
+Ii4h6]Vz:CgIl_2hbJ7ezY3
+!s105 decode_sv_unit
+S1
+R0
+Z21 w1761509397
+Z22 8/eecs/home/aali02/rv32i-core/project/pd3/design/code/decode.sv
+Z23 F/eecs/home/aali02/rv32i-core/project/pd3/design/code/decode.sv
+!i122 2
+L0 26 67
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+Xdecode_sv_unit
+R1
+R2
+VD4CKLfLShH[VESYCk4aiA1
+r1
+!s85 0
+!i10b 1
+!s100 TM<[O6bBC^?U`RhFhF=mA1
+ID4CKLfLShH[VESYCk4aiA1
+!i103 1
+S1
+R0
+R21
+R22
+R23
+R13
+!i122 2
+R14
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+vdesign_wrapper
+R1
+R2
+!i10b 1
+!s100 58IkI`:ZOK`ko1oG>H^Y63
+R16
+I0iPoP<8md2z`@IfXz6>h<1
+R3
+R17
+S1
+R0
+w1757344351
+8/eecs/home/aali02/rv32i-core/project/pd3/design/design_wrapper.sv
+F/eecs/home/aali02/rv32i-core/project/pd3/design/design_wrapper.sv
+!i122 2
+L0 6 10
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+vfetch
+R1
+DXx4 work 13 fetch_sv_unit 0 22 8^hi8HYK01L5j_]A`Y5zQ0
+R2
+R3
+r1
+!s85 0
+!i10b 1
+!s100 T6?XLmMl0FS]ZG9]cHP7V2
+I<oH;9]@9?T]<PgbP:B4l03
+!s105 fetch_sv_unit
+S1
+R0
+Z24 w1761509640
+Z25 8/eecs/home/aali02/rv32i-core/project/pd3/design/code/fetch.sv
+Z26 F/eecs/home/aali02/rv32i-core/project/pd3/design/code/fetch.sv
+!i122 2
+L0 19 41
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+Xfetch_sv_unit
+R1
+R2
+V8^hi8HYK01L5j_]A`Y5zQ0
+r1
+!s85 0
+!i10b 1
+!s100 ZiA<o5j=O5YcOgnM03][o0
+I8^hi8HYK01L5j_]A`Y5zQ0
+!i103 1
+S1
+R0
+R24
+R25
+R26
+R13
+!i122 2
+R14
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+vigen
+R1
+DXx4 work 12 igen_sv_unit 0 22 GneIdh]^a9P_@fQh<6N8E3
+R2
+R3
+r1
+!s85 0
+!i10b 1
+!s100 g_j7H[oRmAc8I<9loCTOA0
+IohE9zdXaoJ3;<oM;C?fPB1
+!s105 igen_sv_unit
+S1
+R0
+R4
+Z27 8/eecs/home/aali02/rv32i-core/project/pd3/design/code/igen.sv
+Z28 F/eecs/home/aali02/rv32i-core/project/pd3/design/code/igen.sv
+!i122 2
+L0 15 52
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+Xigen_sv_unit
+R1
+R2
+VGneIdh]^a9P_@fQh<6N8E3
+r1
+!s85 0
+!i10b 1
+!s100 2a^To:E2Ybd79NHfCgmzL3
+IGneIdh]^a9P_@fQh<6N8E3
+!i103 1
+S1
+R0
+R4
+R27
+R28
+R13
+!i122 2
+R14
+R7
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+vmemory
+R1
+R2
+!i10b 1
+!s100 SFi62Wj^i6V?kZ_AeCOEl1
+R16
+I?]SJoB5=l:1<7Ral56f063
+R3
+S1
+R0
+R4
+8/eecs/home/aali02/rv32i-core/project/pd3/design/code/memory.sv
+F/eecs/home/aali02/rv32i-core/project/pd3/design/code/memory.sv
+!i122 2
+L0 20 73
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12
+vtop
+R1
+R2
+!i10b 1
+!s100 BkD:9C[0SPomMnf;DeK1T1
+R16
+I;ezY8fmo?jRJ_O<cXX1;30
+R3
+R17
+S1
+R0
+R18
+8/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/test_pd.sv
+F/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/test_pd.sv
+F/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/tracegen.v
+F/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/fields.h
+F/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/trace_dump.h
+F/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/pattern_dump.h
+F/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/pattern_check.h
+F/eecs/home/aali02/rv32i-core/project/pd3/verif/tests/tasks.h
+!i122 2
+L0 4 330
+R7
+r1
+!s85 0
+31
+R8
+R15
+R9
+!i113 1
+R10
+R11
+R12

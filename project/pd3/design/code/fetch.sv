@@ -25,7 +25,7 @@ module fetch #(
 	input logic clk,
 	input logic rst,
     input logic pcsel_i,
-    input logic [AWIDTH - 1:0] pcbranch_i,
+    input logic [AWIDTH - 1:0] pc_branch_i,
 	// outputs	
 	output logic [AWIDTH - 1:0] pc_o,
     output logic [DWIDTH - 1:0] insn_o
@@ -41,7 +41,7 @@ module fetch #(
     always_comb begin
         pc_d = pc_q + AWIDTH'(32'd4); // default pc increment
         if (pcsel_i) begin
-            pc_d = pcbranch_i; // branch target address
+            pc_d = pc_branch_i; // branch target address
         end
     end
     // PC register
@@ -54,6 +54,6 @@ module fetch #(
     end
 
     assign pc_o = pc_q;
-    assign insn_o = '0; 
+    assign insn_o = '0;
 
 endmodule : fetch

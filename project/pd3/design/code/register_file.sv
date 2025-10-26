@@ -53,7 +53,7 @@
             for (int i = 0; i < 32; i++) begin
                 registers[i] <= ZERO;
             end
-            reigsters[5'd2] <= STACK_POINTER_INIT; // initialize stack pointer (x2)
+            registers[5'd2] <= STACK_POINTER_INIT; // initialize stack pointer (x2)
         end else begin
             registers[5'd0] <= ZERO; // x0 is always zero
             if (regwren_i && (rd_i != 5'd0)) begin

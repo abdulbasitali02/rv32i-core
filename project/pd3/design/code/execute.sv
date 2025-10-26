@@ -86,7 +86,7 @@ module alu #(
             end
 
             OPCODE_BRANCH: begin
-                operand_a = rs1_i;
+                operand_a = pc_i;
                 operand_b = imm_i;
             end
 

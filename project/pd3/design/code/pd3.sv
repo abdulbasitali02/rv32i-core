@@ -61,11 +61,11 @@ module pd3 #(
   logic [4:0] rf_rs2_addr;
   logic [DWIDTH-1:0] rf_rs1_data;
   logic [DWIDTH-1:0] rf_rs2_data;
-  logic [DWIDTH-1:0] rf_wb_data;
+  logic [DWIDTH-1:0] wb_data;
 
   //execute stage signals/interface
   logic [AWIDTH-1:0] ex_alu_res;
-  logic ex_brtaken;
+  logic ex_br_taken;
 
   //imem interface
   logic [AWIDTH-1:0] imem_addr;
@@ -81,6 +81,8 @@ module pd3 #(
   logic dmem_read_en;
   logic dmem_write_en;
   logic [AWIDTH-1:0] dmem_offset;
+  logic [AWIDTH-1:0] branch_target;
+  logic pcsel_taken;
 
   logic [AWIDTH-1:0] id_pc_plus4_aw;
   logic [DWIDTH-1:0] id_pc_plus4_dw;
@@ -93,7 +95,7 @@ module pd3 #(
   //fetch stage
 
   assign branch_target = ex_alu_res[AWIDTH-1:0];
-    assign pcsel_taken   = id_pcsel & ex_br_taken;
+  assign pcsel_taken   = id_pcsel & ex_br_taken;
 
     fetch #(
         .DWIDTH(DWIDTH),
