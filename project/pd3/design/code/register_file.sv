@@ -48,19 +48,18 @@
      logic [DWIDTH-1:0] registers [0:31];
 
      //SYNCHRONOUS write with RESET initialization of stack pointer
-     always_ff @(posedge clk) begin
-         if (rst) begin
-             for (int i = 0; i < 32; i++) begin
-                    registers[i] <= '0;
-                end
-                registers[5'd2] <= STACK_POINTER_INIT; // Initialize stack pointer (x2)
-                registers [5'd0] <= '0; // Ensure x0 is always 0
-            end else begin
-                registers [5'd0] <= '0; // hardwire x0 to 0
-                if (regwren_i && (rd_i != 5'd0)) begin
-                    registers[rd_i] <= datawb_i;
-                end
+    always_ff @(posedge clk) begin
+        if (rst) begin
+            for (int i = 0; i < 32; i++) begin
+                registers[i] <= ZERO;
             end
+            reigsters[5'd2] <= STACK_POINTER_INIT; // initialize stack pointer (x2)
+        end else begin
+            registers[5'd0] <= ZERO; // x0 is always zero
+            if (regwren_i && (rd_i != 5'd0)) begin
+                registers[rd_i] <= datawb_i;
+            end
+
         end
 
         //combinational read ports

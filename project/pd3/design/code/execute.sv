@@ -85,6 +85,11 @@ module alu #(
                 operand_b = imm_i;
             end
 
+            OPCODE_BRANCH: begin
+                operand_a = rs1_i;
+                operand_b = imm_i;
+            end
+
             default: begin
                 operand_a = rs1_i;
                 operand_b = rs2_i;
