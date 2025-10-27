@@ -24,8 +24,6 @@
  */
 
 
-`include "constants.svh"
-
 module alu #(
     parameter int DWIDTH=32,
     parameter int AWIDTH=32
@@ -41,6 +39,7 @@ module alu #(
     output logic [DWIDTH-1:0] res_o,
     output logic brtaken_o
 );
+    `include "constants.svh"
 
     /*
      * Process definitions to be filled by

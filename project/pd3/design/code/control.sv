@@ -23,8 +23,6 @@
  * 9) 2-bit writeback sel wbsel_o
  */
 
-`include "constants.svh"
-
 module control #(
 	parameter int DWIDTH=32
 )(
@@ -45,6 +43,7 @@ module control #(
     output logic [1:0] wbsel_o,
     output logic [3:0] alusel_o
 );
+    `include "constants.svh"
 
     /*
      * Process definitions to be filled by

@@ -1,0 +1,31 @@
+# vsim -suppress 3839 -c -do "/eecs/home/paavan/rv32i-core/project/pd3/verif/scripts/run.macro" /eecs/home/paavan/rv32i-core/project/pd3/work.top 
+# Start time: 23:15:52 on Oct 26,2025
+# Loading sv_std.std
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.top
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.clockgen
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.design_wrapper
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.pd3_sv_unit
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.pd3
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.fetch_sv_unit
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.fetch
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.memory
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.decode_sv_unit
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.decode
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.igen
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.control
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.register_file_sv_unit
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.register_file
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.alu
+# Loading /eecs/home/paavan/rv32i-core/project/pd3/work.branch_control
+# do /eecs/home/paavan/rv32i-core/project/pd3/verif/scripts/run.macro
+# IMEMORY: Loaded 127 32-bit words from /eecs/home/paavan/rv32i-core/project/pd3/verif/data/test1.x
+# IMEMORY: Loaded 127 32-bit words from /eecs/home/paavan/rv32i-core/project/pd3/verif/data/test1.x
+# D stage mismatch: expected PC=01000000, OPCODE=13, RD=02, RS1=02, RS2=00, FUNCT3=0, FUNCT7=00, IMM=ffffffd0, got PC=00000000, OPCODE=13, RD=00, RS1=00, RS2=00, FUNCT3=0, FUNCT7=00, IMM=00000000 
+# R stage mismatch: expected READ_RS1=02, READ_RS2=02, READ_RS1_DATA=40000002, READ_RS2_DATA=40000002, got READ_RS1=00, READ_RS2=00, READ_RS1_DATA=00000000, READ_RS2_DATA=00000000
+# E stage mismatch: expected PC=01000000, ALU_RES=01000000, BR_TAKEN=0, got PC=00000000, ALU_RES=00000000, BR_TAKEN=0
+# ** Fatal: Assertion error.
+#    Time: 12 ps  Scope: top.genblk3.tick_check File: /eecs/home/paavan/rv32i-core/project/pd3/verif/tests/pattern_check.h Line: 35
+# ** Note: $finish    : /eecs/home/paavan/rv32i-core/project/pd3/verif/tests/pattern_check.h(35)
+#    Time: 12 ps  Iteration: 1  Region: /top/genblk3
+# End time: 23:15:53 on Oct 26,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

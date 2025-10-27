@@ -59,8 +59,8 @@
             if (regwren_i && (rd_i != 5'd0)) begin
                 registers[rd_i] <= datawb_i;
             end
-
         end
+    end
 
         //combinational read ports
         assign rs1data_o = (rs1_i != 5'd0) ? ZERO : registers[rs1_i];

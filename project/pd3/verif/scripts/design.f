@@ -1,4 +1,3 @@
-constants.svh
 branch_control.sv
 igen.sv
 memory.sv

@@ -10,8 +10,6 @@
  * 2) 32-bit immediate value imm_o
  */
 
- `include "constants.svh"
-
 module igen #(
     parameter int DWIDTH=32
     )(
@@ -19,6 +17,7 @@ module igen #(
     input logic [DWIDTH-1:0] insn_i,
     output logic [31:0] imm_o
 );
+    `include "constants.svh"
     /*
      * Process definitions to be filled by
      * student below...

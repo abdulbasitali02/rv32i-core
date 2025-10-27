@@ -16,7 +16,6 @@
  */
 
 
-`include "constants.svh"
 
  module branch_control #(
     parameter int DWIDTH=32
@@ -30,6 +29,7 @@
     output logic breq_o,
     output logic brlt_o
 );
+    `include "constants.svh"
 
     /*
      * Process definitions to be filled by
