@@ -52,14 +52,14 @@ module decode #(
      * student below...
      */
 
-    logic [DWIDTH-1:0] pc_q;
+    logic [AWIDTH-1:0] pc_q;
     logic [DWIDTH-1:0] insn_q;
     logic [DWIDTH-1:0] imm_q;
 
     // Register the inpurts to create decode stage pipeline registers
     always_ff @(posedge clk) begin
         if (rst) begin
-            pc_q <= ZERO;
+            pc_q <= AWIDTH'(IMEM_BASE_ADDR);
             insn_q <= INSN_NOP; // NOP instruction
         end else begin
             pc_q <= pc_i;

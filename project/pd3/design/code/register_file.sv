@@ -45,7 +45,7 @@
      * student below...
      */
 
-     logic [DWIDTH-1:0] registers [0:31];
+    logic [DWIDTH-1:0] registers [0:31];
 
      //SYNCHRONOUS write with RESET initialization of stack pointer
     always_ff @(posedge clk) begin
@@ -63,8 +63,8 @@
     end
 
         //combinational read ports
-        assign rs1data_o = (rs1_i != 5'd0) ? ZERO : registers[rs1_i];
-        assign rs2data_o = (rs2_i != 5'd0) ? ZERO : registers[rs2_i];
+        assign rs1data_o = (rs1_i == 5'd0) ? ZERO : registers[rs1_i];
+        assign rs2data_o = (rs2_i == 5'd0) ? ZERO : registers[rs2_i];
 
 
 endmodule : register_file
