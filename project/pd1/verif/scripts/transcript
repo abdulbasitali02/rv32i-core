@@ -1,0 +1,15 @@
+# vsim -suppress 3839 -c -do "/eecs/home/aali02/rv32i-core/project/pd1/verif/scripts/run.macro" /eecs/home/aali02/rv32i-core/project/pd1/work.top 
+# Start time: 18:29:44 on Sep 21,2025
+# Loading sv_std.std
+# Loading /eecs/home/aali02/rv32i-core/project/pd1/work.top
+# Loading /eecs/home/aali02/rv32i-core/project/pd1/work.clockgen
+# Loading /eecs/home/aali02/rv32i-core/project/pd1/work.design_wrapper
+# Loading /eecs/home/aali02/rv32i-core/project/pd1/work.pd1
+# Loading /eecs/home/aali02/rv32i-core/project/pd1/work.fetch
+# Loading /eecs/home/aali02/rv32i-core/project/pd1/work.memory
+# do /eecs/home/aali02/rv32i-core/project/pd1/verif/scripts/run.macro
+# IMEMORY: Loaded 127 32-bit words from /eecs/home/aali02/rv32i-core/project/pd1/verif/data/test1.x
+# ** Note: $finish    : /eecs/home/aali02/rv32i-core/project/pd1/verif/tests/clockgen.sv(31)
+#    Time: 100001 ps  Iteration: 1  Instance: /top/clkg
+# End time: 18:29:45 on Sep 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
