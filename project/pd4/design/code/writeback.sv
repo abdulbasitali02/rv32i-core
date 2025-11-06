@@ -22,15 +22,33 @@
      input logic [AWIDTH-1:0] pc_i,
      input logic [DWIDTH-1:0] alu_res_i,
      input logic [DWIDTH-1:0] memory_data_i,
+     input logic [DWIDTH-1:0] imm_i,
      input logic [1:0] wbsel_i,
      input logic brtaken_i,
      output logic [DWIDTH-1:0] writeback_data_o,
      output logic [AWIDTH-1:0] next_pc_o
  );
 
+ `include "constants.svh"
+
     /*
      * Process definitions to be filled by
      * student below...
      */
+
+     logic [AWIDTH-1:0] pc_plus4;
+
+     assign pc_plus4 = pc_i + AWIDTH'(32'd4);
+
+     always_comb begin
+        unique case (wbsel_i)
+            WBSEL_ALU: writeback_data_o = alu_res_i;
+            WBSEL_MEM: writeback_data_o = memory_data_i;
+            WBSEL_PC4: writeback_data_o = DWIDTH'(pc_plus4);
+            WBSEL_IMM: writeback_data_o = imm_i;
+            default: writeback_data_o = alu_res_i;
+        endcase
+    end
+
 
 endmodule : writeback
