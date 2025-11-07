@@ -42,6 +42,7 @@ always_ff @(posedge clk) begin
         pc_q <= next_pc_i;
         insn_q <= insn_mem_i;
     end
+end
 
 assign pc_o = pc_q;
 assign insn_o = insn_q;
