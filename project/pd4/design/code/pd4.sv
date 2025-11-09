@@ -111,6 +111,8 @@ module pd4 #(
   ) u_fetch (
         .clk(clk),
         .rst(reset),
+        .pcsel_i(branch_taken_actual),
+        .pc_branch_i(ex_alu_res[AWIDTH-1:0]),
         .next_pc_i(next_pc),
         .insn_mem_i(imem_data),
         .pc_o(if_pc),
@@ -224,7 +226,7 @@ module pd4 #(
     memory #(
         .AWIDTH(AWIDTH),
         .DWIDTH(DWIDTH),
-        .IMEM_BASE_ADDR(DMEM_BASE_ADDR),
+        .IMEM_BASE_ADDR(DMEM_BASE_ADDR)
     ) u_dmem (
         .clk(clk),
         .rst(reset),

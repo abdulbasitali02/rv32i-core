@@ -1,0 +1,171 @@
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:15:14: Define or directive not defined: '`D_PC'
+                                                                                            : ... Suggested alternative: '`__D_PC'
+   15 |     dut.core.`D_PC,
+      |              ^~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+        ... See the manual at https://verilator.org/verilator_doc.html?v=5.042 for more assistance.
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:15:19: syntax error, unexpected ','
+   15 |     dut.core.`D_PC,
+      |                   ^
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:16:14: Define or directive not defined: '`D_OPCODE'
+                                                                                            : ... Suggested alternative: '`__D_OPCODE'
+   16 |     dut.core.`D_OPCODE,
+      |              ^~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:17:14: Define or directive not defined: '`D_RD'
+                                                                                            : ... Suggested alternative: '`__D_RD'
+   17 |     dut.core.`D_RD,
+      |              ^~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:18:14: Define or directive not defined: '`D_RS1'
+                                                                                            : ... Suggested alternative: '`__D_RS1'
+   18 |     dut.core.`D_RS1,
+      |              ^~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:19:14: Define or directive not defined: '`D_RS2'
+                                                                                            : ... Suggested alternative: '`__D_RS2'
+   19 |     dut.core.`D_RS2,
+      |              ^~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:20:14: Define or directive not defined: '`D_FUNCT3'
+                                                                                            : ... Suggested alternative: '`__D_FUNCT3'
+   20 |     dut.core.`D_FUNCT3,
+      |              ^~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:21:14: Define or directive not defined: '`D_FUNCT7'
+                                                                                            : ... Suggested alternative: '`__D_FUNCT7'
+   21 |     dut.core.`D_FUNCT7,
+      |              ^~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:22:14: Define or directive not defined: '`D_IMM'
+                                                                                            : ... Suggested alternative: '`__D_IMM'
+   22 |     dut.core.`D_IMM,
+      |              ^~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:23:14: Define or directive not defined: '`D_SHAMT'
+                                                                                            : ... Suggested alternative: '`__D_SHAMT'
+   23 |     dut.core.`D_SHAMT);
+      |              ^~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:28:14: Define or directive not defined: '`R_READ_RS1'
+                                                                                            : ... Suggested alternative: '`__R_READ_RS1'
+   28 |     dut.core.`R_READ_RS1,
+      |              ^~~~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:28:25: syntax error, unexpected ','
+   28 |     dut.core.`R_READ_RS1,
+      |                         ^
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:29:14: Define or directive not defined: '`R_READ_RS2'
+                                                                                            : ... Suggested alternative: '`__R_READ_RS2'
+   29 |     dut.core.`R_READ_RS2,
+      |              ^~~~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:30:14: Define or directive not defined: '`R_READ_RS1_DATA'
+                                                                                            : ... Suggested alternative: '`__R_READ_RS1_DATA'
+   30 |     dut.core.`R_READ_RS1_DATA,
+      |              ^~~~~~~~~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:31:14: Define or directive not defined: '`R_READ_RS2_DATA'
+                                                                                            : ... Suggested alternative: '`__R_READ_RS2_DATA'
+   31 |     dut.core.`R_READ_RS2_DATA);
+      |              ^~~~~~~~~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:36:14: Define or directive not defined: '`E_PC'
+                                                                                            : ... Suggested alternative: '`__E_PC'
+   36 |     dut.core.`E_PC,
+      |              ^~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:36:19: syntax error, unexpected ','
+   36 |     dut.core.`E_PC,
+      |                   ^
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:37:14: Define or directive not defined: '`E_ALU_RES'
+                                                                                            : ... Suggested alternative: '`__E_ALU_RES'
+   37 |     dut.core.`E_ALU_RES,
+      |              ^~~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:38:14: Define or directive not defined: '`E_BR_TAKEN'
+                                                                                            : ... Suggested alternative: '`__E_BR_TAKEN'
+   38 |     dut.core.`E_BR_TAKEN);
+      |              ^~~~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:43:14: Define or directive not defined: '`M_PC'
+                                                                                            : ... Suggested alternative: '`__M_PC'
+   43 |     dut.core.`M_PC,
+      |              ^~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:43:19: syntax error, unexpected ','
+   43 |     dut.core.`M_PC,
+      |                   ^
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:44:14: Define or directive not defined: '`M_ADDRESS'
+                                                                                            : ... Suggested alternative: '`__M_ADDRESS'
+   44 |     dut.core.`M_ADDRESS,
+      |              ^~~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:45:14: Define or directive not defined: '`M_SIZE_ENCODED'
+                                                                                            : ... Suggested alternative: '`__M_SIZE_ENCODED'
+   45 |     dut.core.`M_SIZE_ENCODED,
+      |              ^~~~~~~~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:46:14: Define or directive not defined: '`M_DATA'
+                                                                                            : ... Suggested alternative: '`__M_DATA'
+   46 |     dut.core.`M_DATA);
+      |              ^~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:51:14: Define or directive not defined: '`W_PC'
+                                                                                            : ... Suggested alternative: '`__W_PC'
+   51 |     dut.core.`W_PC,
+      |              ^~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:51:19: syntax error, unexpected ','
+   51 |     dut.core.`W_PC,
+      |                   ^
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:52:14: Define or directive not defined: '`W_ENABLE'
+                                                                                            : ... Suggested alternative: '`__W_ENABLE'
+   52 |     dut.core.`W_ENABLE,
+      |              ^~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:53:14: Define or directive not defined: '`W_DESTINATION'
+                                                                                            : ... Suggested alternative: '`__W_DESTINATION'
+   53 |     dut.core.`W_DESTINATION,
+      |              ^~~~~~~~~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/trace_dump.h:54:14: Define or directive not defined: '`W_DATA'
+                                                                                            : ... Suggested alternative: '`__W_DATA'
+   54 |     dut.core.`W_DATA);
+      |              ^~~~~~~
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/tracegen.v:14:1: ... note: In file included from 'tracegen.v'
+        /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/tests/test_pd.sv:32:1: ... note: In file included from 'test_pd.sv'
+%Error: Exiting due to 29 error(s)

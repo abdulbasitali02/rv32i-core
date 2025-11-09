@@ -25,21 +25,30 @@ module fetch #(
 	input logic clk,
 	input logic rst,
     input logic pcsel_i,
+    input logic [AWIDTH-1:0] pc_branch_i,
     input logic [AWIDTH-1:0] next_pc_i,
     input logic [DWIDTH-1:0] insn_mem_i,
     output logic [AWIDTH-1:0] pc_o,
     output logic [DWIDTH-1:0] insn_o
 );
 
+logic [AWIDTH-1:0] pc_d;
 logic [AWIDTH-1:0] pc_q;
 logic [DWIDTH-1:0] insn_q;
+
+always_comb begin
+    pc_d = next_pc_i;
+    if (pcsel_i) begin
+        pc_d = pc_branch_i;
+    end
+end
 
 always_ff @(posedge clk) begin
     if (rst) begin
         pc_q <= RESET_PC;
-        insn_q <= INSN_NOP; 
+        insn_q <= INSN_NOP;
     end else begin
-        pc_q <= next_pc_i;
+        pc_q <= pc_d;
         insn_q <= insn_mem_i;
     end
 end

@@ -88,7 +88,7 @@ always_ff @(posedge clk) begin
                     main_memory[address + b] <= data_i[8*b +: 8];
                 end
             end
-            $display("MEMORY WRITE: Wrote 0x%08h to 0x%08h", data_i, addr_i), write_strb_i;
+            $display("MEMORY WRITE: Wrote 0x%08h to 0x%08h", data_i, addr_i, write_strb_i);
         end else begin
             $display("MEMORY WRITE ERROR: Address %h out of bounds", addr_i);
         end
