@@ -23,6 +23,8 @@ module pd4 #(
   *
   */
 
+  localparam logic [AWIDTH-1:0] DMEM_BASE_ADDR = IMEM_BASE_ADDR;
+
   //fetch signals
 
   logic [AWIDTH-1:0] if_pc;
@@ -75,7 +77,7 @@ module pd4 #(
   logic dmem_read_en;
   logic dmem_write_en;
   logic dmem_rvalid;
-  logic [DWIDTH-1:0] mem_stage_datal
+  logic [DWIDTH-1:0] mem_stage_data;
 
   //auxiliary signals
   logic [1:0] byte_offset;
@@ -89,12 +91,13 @@ module pd4 #(
   memory #(
     .AWIDTH(AWIDTH),
     .DWIDTH(DWIDTH),
-    .IMEM_BASE_ADDR(IMEM_BASE_ADDR),
+    .IMEM_BASE_ADDR(IMEM_BASE_ADDR)
   ) u_mem (
         .clk(clk),
         .rst(reset),
         .addr_i(if_pc),
         .data_i('0),
+        .write_strb_i('0),
         .read_en_i(1'b1),
         .write_en_i(1'b0),
         .data_o(imem_data),
@@ -109,7 +112,7 @@ module pd4 #(
         .clk(clk),
         .rst(reset),
         .next_pc_i(next_pc),
-        .insn_mem_I(imem_data),
+        .insn_mem_i(imem_data),
         .pc_o(if_pc),
         .insn_o(if_insn)
     );
@@ -135,7 +138,7 @@ module pd4 #(
   );
 
     control #(
-        .DWIDTH(DWIDTH),
+        .DWIDTH(DWIDTH)
     ) u_control (
         .insn_i(id_insn),
         .opcode_i(id_opcode),
@@ -156,7 +159,7 @@ module pd4 #(
     assign rf_rs2_addr = id_rs2sel ? id_rs2 : 5'd0;
   
     register_file #(
-        .DWIDTH(DWIDTH),
+        .DWIDTH(DWIDTH)
     ) register_file_0 (
         .clk(clk),
         .rst(reset),
@@ -186,7 +189,7 @@ module pd4 #(
     );
 
     assign byte_offset = ex_alu_res[1:0];
-    assign shift_amt = {3'b000, byte_offset} << 3;
+    assign shift_amt = {byte_offset, 3'b000};
     always_comb begin
         store_data_masked = rf_rs2_data;
         if (id_memwren) begin
@@ -221,7 +224,7 @@ module pd4 #(
     memory #(
         .AWIDTH(AWIDTH),
         .DWIDTH(DWIDTH),
-        .IMEM_BASE_ADDR(IMEM_BASE_ADDR),
+        .IMEM_BASE_ADDR(DMEM_BASE_ADDR),
     ) u_dmem (
         .clk(clk),
         .rst(reset),
@@ -252,7 +255,7 @@ module pd4 #(
 
     writeback #(
         .DWIDTH(DWIDTH),
-        .AWIDTH(AWIDTH),
+        .AWIDTH(AWIDTH)
     ) u_writeback (
         .pc_i(id_pc),
         .alu_res_i(ex_alu_res),
@@ -267,12 +270,29 @@ module pd4 #(
 
 
 // program termination logic
-reg is_program = 0;
-always_ff @(posedge clk) begin
+logic is_program;
+/*always_ff @(posedge clk) begin
     if (data_out == 32'h00000073) $finish;  // directly terminate if see ecall
     if (data_out == 32'h00008067) is_program = 1;  // if see ret instruction, it is simple program test
     // [TODO] Change register_file_0.registers[2] to the appropriate x2 register based on your module instantiations...
     if (is_program && (register_file_0.registers[2] == 32'h01000000 + `MEM_DEPTH)) $finish;
 end
+*/
+
+always_ff @(posedge clk) begin
+        if (reset) begin
+            is_program <= 1'b0;
+        end else begin
+            if (if_insn == 32'h00000073) begin // ecall
+                $finish;
+            end
+            if (if_insn == 32'h00008067) begin // ret instruction
+                is_program <= 1'b1;
+            end
+            if (is_program && (register_file_0.registers[2] == IMEM_BASE_ADDR + `MEM_DEPTH)) begin
+                $finish;
+            end
+        end
+    end
 
 endmodule : pd4

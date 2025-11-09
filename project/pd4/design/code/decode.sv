@@ -15,8 +15,8 @@ module decode #(
 	// inputs
 	input logic clk,
 	input logic rst,
-	input logic [DWIDTH - 1:0] insn_i,
-	input logic [AWIDTH - 1:0] pc_i,
+	input logic [DWIDTH-1:0] insn_i,
+	input logic [AWIDTH-1:0] pc_i,
 
     // outputs
     output logic [AWIDTH-1:0] pc_o,

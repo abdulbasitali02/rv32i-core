@@ -7,6 +7,7 @@
  * -------- REPLACE THIS FILE WITH THE MEMORY MODULE DEVELOPED IN PD3 -----------
  */
 
+`include "constants.svh"
  module branch_control #(
     parameter int DWIDTH=32
 )(
@@ -19,7 +20,7 @@
     output logic breq_o,
     output logic brlt_o
 );
-    `include "constants.svh"
+
 
     /*
      * Process definitions to be filled by
@@ -43,10 +44,10 @@
 
             unique case (funct3_i)
                 3'b110, 3'b111: begin
-                    brlt_o = rs1_i < rs2_i; //unsigned comparison for BLT and BGE
+                    brlt_o = (rs1_i < rs2_i); //unsigned comparison for BLT and BGE
                 end
                 default: begin
-                    brlt_o = (rs1_signed < rs2_signed); //unsigned comparison for others
+                    brlt_o = (rs1_signed < rs2_signed); //signed comparison for others
                 end
             endcase
         end

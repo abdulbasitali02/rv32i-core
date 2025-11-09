@@ -7,6 +7,7 @@
  * this was execute in pd3 (instantiated as module alu)
  */
 
+ `include "constants.svh"
  module alu #(
     parameter int DWIDTH=32,
     parameter int AWIDTH=32
@@ -22,7 +23,7 @@
     output logic [DWIDTH-1:0] res_o,
     output logic brtaken_o
  );
-     `include "constants.svh"
+    
      
     logic [DWIDTH-1:0] operand_a;
     logic [DWIDTH-1:0] operand_b;
@@ -35,7 +36,7 @@
         operand_a = rs1_i;
         operand_b = rs2_i;
 
-        unique case(opcode_i)
+        unique case (opcode_i)
             OPCODE_LUI: begin
                 operand_a = ZERO;
                 operand_b = imm_i;
@@ -58,12 +59,10 @@
                 operand_a = rs1_i;
                 operand_b = imm_i;
             end
-
             OPCODE_BRANCH: begin
                 operand_a = pc_i;
                 operand_b = imm_i;
             end
-
             default: begin
                 operand_a = rs1_i;
                 operand_b = rs2_i;

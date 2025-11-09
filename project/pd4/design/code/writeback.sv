@@ -15,6 +15,7 @@
  * 2) AWIDTH wide next computed PC next_pc_o
  */
 
+ `include "constants.svh"
  module writeback #(
      parameter int DWIDTH=32,
      parameter int AWIDTH=32
@@ -29,7 +30,7 @@
      output logic [AWIDTH-1:0] next_pc_o
  );
 
- `include "constants.svh"
+
 
     /*
      * Process definitions to be filled by
@@ -37,6 +38,7 @@
      */
 
      logic [AWIDTH-1:0] pc_plus4;
+     logic [AWIDTH-1:0] next_pc;
 
      assign pc_plus4 = pc_i + AWIDTH'(32'd4);
 
@@ -49,6 +51,14 @@
             default: writeback_data_o = alu_res_i;
         endcase
     end
+
+    always_comb begin
+        next_pc = pc_plus4;
+        if (brtaken_i) begin
+            next_pc = AWIDTH'(alu_res_i);
+        end
+    end
+    assign next_pc_o = next_pc;
 
 
 endmodule : writeback

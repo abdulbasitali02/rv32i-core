@@ -8,6 +8,8 @@
  * -------- REPLACE THIS FILE WITH THE MEMORY MODULE DEVELOPED IN PD2 -----------
  */
 
+
+`include "constants.svh"
 module control #(
 	parameter int DWIDTH=32
 )(
@@ -28,7 +30,7 @@ module control #(
     output logic [1:0] wbsel_o,
     output logic [3:0] alusel_o
 );
-    `include "constants.svh"
+ 
 
     /*
      * Process definitions to be filled by
