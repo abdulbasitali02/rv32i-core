@@ -1,10 +1,9 @@
 /*
  * Module: register_file
  *
- * Description: Branch control logic. Only sets the branch control bits based on the
- * branch instruction
+ * Description: Register file 
  *
- * -------- REPLACE THIS FILE WITH THE MEMORY MODULE DEVELOPED IN PD4 -----------
+ * -------- REPLACE THIS FILE WITH THE RF MODULE DEVELOPED IN PD4 -----------
  *
  */
 

@@ -5,7 +5,7 @@
  * instruction. Note that this is part of the decode stage but housed in a separate
  * module for better readability, debug and design purposes.
  *
- * -------- REPLACE THIS FILE WITH THE MEMORY MODULE DEVELOPED IN PD2 -----------
+ * -------- REPLACE THIS FILE WITH THE CONTROL MODULE DEVELOPED IN PD2 -----------
  */
 
 

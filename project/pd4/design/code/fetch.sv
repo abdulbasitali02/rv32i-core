@@ -3,7 +3,7 @@
  *
  * Description: Fetch stage
  *
- * -------- REPLACE THIS FILE WITH THE MEMORY MODULE DEVELOPED IN PD1 -----------
+ * -------- REPLACE THIS FILE WITH THE FETCH MODULE DEVELOPED IN PD1 -----------
  *
  * Inputs:
  * 1) clk
