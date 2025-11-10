@@ -21,7 +21,7 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
     , TOP{this, namep}
 {
     // Check resources
-    Verilated::stackCheck(610);
+    Verilated::stackCheck(6984);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
     _vm_contextp__->timeprecision(-12);
@@ -29,12 +29,14 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
     // Setup each module's pointer back to symbol table (for public functions)
     TOP.__Vconfigure(true);
     // Setup scopes
+    __Vscope_top.configure(this, name(), "top", "top", "<null>", -12, VerilatedScope::SCOPE_OTHER);
     __Vscope_top__clkg.configure(this, name(), "top.clkg", "clkg", "<null>", -12, VerilatedScope::SCOPE_OTHER);
     __Vscope_top__dut__core.configure(this, name(), "top.dut.core", "core", "<null>", -12, VerilatedScope::SCOPE_OTHER);
     __Vscope_top__dut__core__u_alu.configure(this, name(), "top.dut.core.u_alu", "u_alu", "<null>", -12, VerilatedScope::SCOPE_OTHER);
     __Vscope_top__dut__core__u_alu__u_branch_control.configure(this, name(), "top.dut.core.u_alu.u_branch_control", "u_branch_control", "<null>", -12, VerilatedScope::SCOPE_OTHER);
     __Vscope_top__dut__core__u_dmem.configure(this, name(), "top.dut.core.u_dmem", "u_dmem", "<null>", -12, VerilatedScope::SCOPE_OTHER);
     __Vscope_top__dut__core__u_mem.configure(this, name(), "top.dut.core.u_mem", "u_mem", "<null>", -12, VerilatedScope::SCOPE_OTHER);
+    __Vscope_top__genblk3__tick_check.configure(this, name(), "top.genblk3.tick_check", "tick_check", "<null>", -12, VerilatedScope::SCOPE_OTHER);
     // Setup export functions
     for (int __Vfinal = 0; __Vfinal < 2; ++__Vfinal) {
         __Vscope_top__clkg.exportInsert(__Vfinal, "toggleClock", (void*)(&Vtop___024root____Vdpiexp_top__DOT__clkg__DOT__toggleClock_TOP));

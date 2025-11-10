@@ -44,6 +44,7 @@ localparam int MAX_VALID_OFFSET = (BYTES_PER_WORD > 0 && MEM_BYTES >= BYTES_PER_
 logic [DWIDTH-1:0] temp_memory [0:(`LINE_COUNT > 0) ? `LINE_COUNT - 1 : 0];
 logic [7:0]         main_memory [0:MEM_BYTES-1];
 logic [AWIDTH-1:0]  addr_offset;
+logic [AWIDTH-1:0]  addr_aligned;
 logic               read_valid;
 logic               write_valid;
 logic               read_en_prev;
@@ -51,6 +52,7 @@ logic               last_oob_read_valid;
 logic [AWIDTH-1:0]  last_oob_read_addr;
 
 assign addr_offset = to_offset(addr_i);
+assign addr_aligned = align_offset(addr_offset);
 assign read_valid  = read_en_i && addr_in_range(addr_i);
 assign write_valid = write_en_i && addr_in_range(addr_i);
 
@@ -82,6 +84,14 @@ function automatic logic [AWIDTH-1:0] to_offset(input logic [AWIDTH-1:0] addr);
     end
 endfunction
 
+function automatic logic [AWIDTH-1:0] align_offset(input logic [AWIDTH-1:0] offset);
+    if (BYTES_PER_WORD <= 1) begin
+        align_offset = offset;
+    end else begin
+        align_offset = offset & ~AWIDTH'(BYTES_PER_WORD - 1);
+    end
+endfunction
+
 
 initial begin
     for (int i = 0; i < MEM_BYTES; i++) begin
@@ -107,7 +117,7 @@ always_comb begin
 
     if (read_valid) begin
         for (int b = 0; b < BYTES_PER_WORD; b++) begin
-            data_o[8*b +: 8] = main_memory[addr_offset + b];
+            data_o[8*b +: 8] = main_memory[addr_aligned + b];
         end
     end
     `ifndef SYNTHESIS
@@ -121,7 +131,7 @@ always_ff @(posedge clk) begin
     if (write_valid) begin
         for (int b = 0; b < BYTES_PER_WORD; b++) begin
             if (write_strb_i[b]) begin
-                main_memory[addr_offset + b] <= data_i[8*b +: 8];
+                main_memory[addr_aligned + b] <= data_i[8*b +: 8];
             end
         end
 
