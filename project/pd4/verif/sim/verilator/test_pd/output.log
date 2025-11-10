@@ -1,3 +1,23 @@
-- V e r i l a t i o n   R e p o r t: Verilator 5.042 2025-11-02 rev UNKNOWN.REV
-- Verilator: Built from 0.769 MB sources in 15 modules, into 0.193 MB in 9 C++ files needing 0.001 MB
-- Verilator: Walltime 0.064 s (elab=0.009, cvt=0.028, bld=0.000); cpu 0.040 s on 1 threads
+%Warning-IMPLICITSTATIC: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/design/code/memory.sv:91:28: Variable's lifetime implicitly set to static
+                                                                                                          : ... The initializer value will only be set once
+                                                                                                          : ... Suggest use 'static' before variable declaration'
+   91 |         logic [AWIDTH-1:0] address = to_offset(addr_i);
+      |                            ^~~~~~~
+                         ... For warning description see https://verilator.org/warn/IMPLICITSTATIC?v=5.042
+                         ... Use "/* verilator lint_off IMPLICITSTATIC */" and lint_on around source to disable this message.
+%Warning-IMPLICITSTATIC: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/design/code/memory.sv:105:28: Variable's lifetime implicitly set to static
+                                                                                                           : ... The initializer value will only be set once
+                                                                                                           : ... Suggest use 'static' before variable declaration'
+  105 |         logic [AWIDTH-1:0] address = to_offset(addr_i);
+      |                            ^~~~~~~
+%Warning-LATCH: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/design/code/memory.sv:86:1: Latch inferred for signal 'top.dut.core.u_mem.unnamedblk5.address' (not all control paths of combinational always assign a value)
+                                                                                                : ... Suggest use of always_latch for intentional latches
+   86 | always_comb begin
+      | ^~~~~~~~~~~
+                ... For warning description see https://verilator.org/warn/LATCH?v=5.042
+                ... Use "/* verilator lint_off LATCH */" and lint_on around source to disable this message.
+%Warning-LATCH: /Users/aali02/Documents/GitHub/rv32i-core/project/pd4/design/code/memory.sv:86:1: Latch inferred for signal 'top.dut.core.u_dmem.unnamedblk5.address' (not all control paths of combinational always assign a value)
+                                                                                                : ... Suggest use of always_latch for intentional latches
+   86 | always_comb begin
+      | ^~~~~~~~~~~
+%Error: Exiting due to 4 warning(s)
