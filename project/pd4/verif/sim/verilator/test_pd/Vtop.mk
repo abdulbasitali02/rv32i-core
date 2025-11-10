@@ -37,7 +37,7 @@ VM_PREFIX = Vtop
 VM_MODPREFIX = Vtop
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
-  -DMEM_DEPTH=1048576 -DMEM_PATH="/Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/data/test1.x" \
+  -DMEM_DEPTH=1048576 -DMEM_PATH="/Users/aali02/Documents/GitHub/rv32i-core/project/pd4/verif/data/test2.x" \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
