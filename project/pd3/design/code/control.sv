@@ -50,9 +50,13 @@ module control #(
      * student below...
      */
 
+logic [4:0] rd;
+assign rd = insn_i[11:7];
+
 logic [6:0] imm_shamt_funct7;
 assign imm_shamt_funct7 = insn_i[31:25];
 
+//nop like
 always_comb begin
     pcsel_o = 1'b0;
     immsel_o = 1'b0;
@@ -122,9 +126,10 @@ always_comb begin
         end
 
         OPCODE_OP_IMM: begin
-            regwren_o = 1'b1;
+            regwren_o = (rd != 5'd0);
             immsel_o  = 1'b1;
             rs1sel_o  = 1'b1;
+			rs2sel_o  = 1'b0;
             wbsel_o   = WBSEL_ALU;
 
             unique case (funct3_i)
@@ -179,11 +184,10 @@ always_comb begin
 
         OPCODE_SYSTEM: begin
             //treat system operations as immediate baseds register writes if rd != 0
-            regwren_o = (insn_i[11:7] != 5'd0);
-            immsel_o  = 1'b1;
-            rs1sel_o  = 1'b1;
-            wbsel_o   = WBSEL_ALU;
-            alusel_o  = ALU_OP_ADD;
+            regwren_o = 1'b0;
+            memwren_o = 1'b0;
+            memren_o  = 1'b0;
+           
         end
 
         default: begin
