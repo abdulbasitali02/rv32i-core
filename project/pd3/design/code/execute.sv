@@ -78,11 +78,15 @@ module alu #(
                 operand_b = imm_i;
             end
             OPCODE_LOAD,
-            OPCODE_STORE,
             OPCODE_OP_IMM: begin
                 operand_a = rs1_i;
                 operand_b = imm_i;
             end
+
+			OPCODE_STORE: begin
+				operand_a = ZERO;
+				operand_b = imm_i;
+			end
 
             OPCODE_BRANCH: begin
                 operand_a = pc_i;

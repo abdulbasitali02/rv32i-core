@@ -1,8 +1,7 @@
 /*
  * Module: register_file
  *
- * Description: Branch control logic. Only sets the branch control bits based on the
- * branch instruction
+ * Description: register file
  *
  *NOTES:
  * 1) The register file is a 32-entry by 32-bit register file.
@@ -47,24 +46,27 @@
 
     logic [DWIDTH-1:0] registers [0:31];
 
+  //combinational read ports
+        assign rs1data_o = (rs1_i == 5'd0) ? ZERO : registers[rs1_i];
+        assign rs2data_o = (rs2_i == 5'd0) ? ZERO : registers[rs2_i];
+
      //SYNCHRONOUS write with RESET initialization of stack pointer
     always_ff @(posedge clk) begin
         if (rst) begin
             for (int i = 0; i < 32; i++) begin
                 registers[i] <= ZERO;
             end
-            registers[5'd2] <= STACK_POINTER_INIT; // initialize stack pointer (x2)
+            registers[5'd2] <= STACK_POINTER_INIT; // initialize stack pointer (x2) = 0x0110_0000
         end else begin
             registers[5'd0] <= ZERO; // x0 is always zero
-            if (regwren_i && (rd_i != 5'd0)) begin
+            
+	if (regwren_i && (rd_i != 5'd0)) begin
                 registers[rd_i] <= datawb_i;
             end
         end
     end
 
-        //combinational read ports
-        assign rs1data_o = (rs1_i == 5'd0) ? ZERO : registers[rs1_i];
-        assign rs2data_o = (rs2_i == 5'd0) ? ZERO : registers[rs2_i];
+      
 
 
 endmodule : register_file

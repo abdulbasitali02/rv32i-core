@@ -13,7 +13,7 @@
 `define PROBE_D_SHAMT id_shamt
 
 `define PROBE_R_WRITE_ENABLE rf_wren
-`define PROBE_R_WRITE_DESTINATION id_rd
+`define PROBE_R_WRITE_DESTINATION rf_rd_addr
 `define PROBE_R_WRITE_DATA wb_data
 `define PROBE_R_READ_RS1 rf_rs1_addr
 `define PROBE_R_READ_RS2 rf_rs2_addr

@@ -5,6 +5,7 @@
 In this PD, you will develop the **execute stage**, **branch control** logic and **register file**.
 - The **branch control** logic uses the fields decoded from the **decode stage** to setup the necessary branch control signals
 - The **register file** implements the 32 32-bit RV32 registers. Ensure that the stack pointer register ('x2') is set such that the stack grows downwards (from high address to low address). 
+- In this PD, reads from the register file are combinational and writes to the register file are sequential (on the rising clock edge).
 - The **execute stage** logic compute the result based on the instruction and generates a 32-bit result.
 - The code templates and descriptions are provided in `design/code/*.sv`.
 

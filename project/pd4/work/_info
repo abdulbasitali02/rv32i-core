@@ -1,0 +1,636 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/eecs/home/aali02/rv32i-core/project/pd4/verif/scripts
+valu
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+DXx4 work 11 alu_sv_unit 0 22 h@bZP`CJHO_EIKNW6AA?=2
+Z2 !s110 1762733707
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 <FMG>:9O8KgRV]7<n57>42
+Ij2<fHSIkZeRW6Z0[[BoPH3
+!s105 alu_sv_unit
+S1
+R0
+Z4 w1762733508
+Z5 8/eecs/home/aali02/rv32i-core/project/pd4/design/code/alu.sv
+Z6 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/alu.sv
+!i122 9
+L0 11 133
+Z7 OV;L;2020.1;71
+31
+Z8 !s108 1762733707.000000
+Z9 !s107 /eecs/home/aali02/rv32i-core/project/pd4/verif/tests/tasks.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/pattern_check.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/pattern_dump.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/trace_dump.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/fields.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/tracegen.v|/eecs/home/aali02/rv32i-core/project/pd4/design//probes.svh|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/test_pd.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/design_wrapper.sv|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/clockgen.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/pd4.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/writeback.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/register_file.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/igen.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/alu.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/decode.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/branch_control.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/control.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/fetch.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/memory.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/constants.svh|
+Z10 !s90 -work|/eecs/home/aali02/rv32i-core/project/pd4/work|-suppress|7061|-sv|+incdir+/eecs/home/aali02/rv32i-core/project/pd4/design/code|+incdir+/eecs/home/aali02/rv32i-core/project/pd4/design/|+incdir+/eecs/home/aali02/rv32i-core/project/pd4/verif/tests|+define+MEM_PATH="/eecs/home/aali02/rv32i-core/project/pd4/verif/data/test1.x"|+define+TEST_VECTOR="/eecs/home/aali02/rv32i-core/project/pd4/verif/data/test_vector.x"|+define+MEM_DEPTH=1048576|+define+GEN_TRACE=0|+define+TRACE_FILE="test1.trace"|+define+LINE_COUNT=154|+define+PATTERN_FILE="/eecs/home/aali02/rv32i-core/project/pd4/verif/data/test1.pattern"|+define+PATTERN_LINE_COUNT=1371|+define+PATTERN_DUMP_FILE="test1.dump"|+define+PATTERN_DUMP=0|+define+PATTERN_CHECK=0|+define+VCD_FILE="test1.vcd"|+define+TIMEOUT=50000|-stats=none|/eecs/home/aali02/rv32i-core/project/pd4/design/code/constants.svh|/eecs/home/aali02/rv32i-core/project/pd4/design/code/memory.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/fetch.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/control.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/branch_control.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/decode.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/alu.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/igen.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/register_file.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/writeback.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/pd4.sv|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/clockgen.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/design_wrapper.sv|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/test_pd.sv|
+!i113 1
+Z11 o-suppress 7061 -work /eecs/home/aali02/rv32i-core/project/pd4/work -sv
+Z12 !s92 -suppress 7061 -work /eecs/home/aali02/rv32i-core/project/pd4/work -sv +incdir+/eecs/home/aali02/rv32i-core/project/pd4/design/code +incdir+/eecs/home/aali02/rv32i-core/project/pd4/design/ +incdir+/eecs/home/aali02/rv32i-core/project/pd4/verif/tests +define+MEM_PATH=\"/eecs/home/aali02/rv32i-core/project/pd4/verif/data/test1.x\" +define+TEST_VECTOR=\"/eecs/home/aali02/rv32i-core/project/pd4/verif/data/test_vector.x\" +define+MEM_DEPTH=1048576 +define+GEN_TRACE=0 +define+TRACE_FILE=\"test1.trace\" +define+LINE_COUNT=154 +define+PATTERN_FILE=\"/eecs/home/aali02/rv32i-core/project/pd4/verif/data/test1.pattern\" +define+PATTERN_LINE_COUNT=1371 +define+PATTERN_DUMP_FILE=\"test1.dump\" +define+PATTERN_DUMP=0 +define+PATTERN_CHECK=0 +define+VCD_FILE=\"test1.vcd\" +define+TIMEOUT=50000
+Z13 tCvgOpt 0
+Xalu_sv_unit
+R1
+R2
+Vh@bZP`CJHO_EIKNW6AA?=2
+r1
+!s85 0
+!i10b 1
+!s100 da[>Fa<UBX@4Hm1a^BaD<0
+Ih@bZP`CJHO_EIKNW6AA?=2
+!i103 1
+S1
+R0
+R4
+R5
+R6
+Z14 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/constants.svh
+!i122 9
+Z15 L0 10 0
+R7
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+R13
+vbranch_control
+R1
+DXx4 work 22 branch_control_sv_unit 0 22 RZCjloW@Q4E4]UfoROGLE2
+Z16 !s110 1762735244
+R3
+r1
+!s85 0
+!i10b 1
+!s100 <PA3Sk:bYnUjX9O;7YnSf0
+I:[AZYS35i^n2neP5VdN0Q2
+!s105 branch_control_sv_unit
+S1
+R0
+Z17 w1762735216
+Z18 8/eecs/home/aali02/rv32i-core/project/pd4/design/code/branch_control.sv
+Z19 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/branch_control.sv
+!i122 12
+L0 11 46
+R7
+31
+Z20 !s108 1762735244.000000
+Z21 !s107 /eecs/home/aali02/rv32i-core/project/pd4/verif/tests/tasks.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/pattern_check.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/pattern_dump.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/trace_dump.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/fields.h|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/tracegen.v|/eecs/home/aali02/rv32i-core/project/pd4/design//probes.svh|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/test_pd.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/design_wrapper.sv|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/clockgen.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/pd4.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/writeback.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/register_file.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/igen.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/decode.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/branch_control.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/control.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/fetch.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/memory.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/constants.svh|
+Z22 !s90 -work|/eecs/home/aali02/rv32i-core/project/pd4/work|-suppress|7061|-sv|+incdir+/eecs/home/aali02/rv32i-core/project/pd4/design/code|+incdir+/eecs/home/aali02/rv32i-core/project/pd4/design/|+incdir+/eecs/home/aali02/rv32i-core/project/pd4/verif/tests|+define+MEM_PATH="/eecs/home/aali02/rv32i-core/project/pd4/verif/data/test1.x"|+define+TEST_VECTOR="/eecs/home/aali02/rv32i-core/project/pd4/verif/data/test_vector.x"|+define+MEM_DEPTH=1048576|+define+GEN_TRACE=0|+define+TRACE_FILE="test1.trace"|+define+LINE_COUNT=154|+define+PATTERN_FILE="/eecs/home/aali02/rv32i-core/project/pd4/verif/data/test1.pattern"|+define+PATTERN_LINE_COUNT=1371|+define+PATTERN_DUMP_FILE="test1.dump"|+define+PATTERN_DUMP=0|+define+PATTERN_CHECK=0|+define+VCD_FILE="test1.vcd"|+define+TIMEOUT=50000|-stats=none|/eecs/home/aali02/rv32i-core/project/pd4/design/code/constants.svh|/eecs/home/aali02/rv32i-core/project/pd4/design/code/memory.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/fetch.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/control.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/branch_control.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/decode.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/igen.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/register_file.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/writeback.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/code/pd4.sv|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/clockgen.sv|/eecs/home/aali02/rv32i-core/project/pd4/design/design_wrapper.sv|/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/test_pd.sv|
+!i113 1
+R11
+R12
+R13
+Xbranch_control_sv_unit
+R1
+R16
+VRZCjloW@Q4E4]UfoROGLE2
+r1
+!s85 0
+!i10b 1
+!s100 9HOM[ajU3012U=EzRdJ>53
+IRZCjloW@Q4E4]UfoROGLE2
+!i103 1
+S1
+R0
+R17
+R18
+R19
+R14
+!i122 12
+R15
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vclockgen
+R1
+Z23 !s110 1762964948
+!i10b 1
+!s100 XGla>YnT?aHlG7Lg@<j9J1
+Z24 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IDVo=JV2KQcRRSXe;Y:Vg81
+R3
+Z25 !s105 fetch_sv_unit
+S1
+R0
+Z26 w1762733354
+8/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/clockgen.sv
+F/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/clockgen.sv
+!i122 18
+L0 11 39
+R7
+r1
+!s85 0
+31
+Z27 !s108 1762964948.000000
+R21
+R22
+!i113 1
+R11
+R12
+R13
+Xconstants_svh_unit
+R1
+R23
+V;CKJ^^CzF<LnicZelGJYH2
+r1
+!s85 0
+!i10b 1
+!s100 =T7jClR4[F3dSSI33:31;2
+I;CKJ^^CzF<LnicZelGJYH2
+!i103 1
+S1
+R0
+R26
+8/eecs/home/aali02/rv32i-core/project/pd4/design/code/constants.svh
+R14
+!i122 18
+R15
+R7
+31
+R27
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vcontrol
+R1
+DXx4 work 15 control_sv_unit 0 22 XI1ODK_18Y8Wc7X]j?:SW3
+R16
+R3
+r1
+!s85 0
+!i10b 1
+!s100 6eOW3jGa6zM^>CHCn5LYg2
+IS:ceKbP7Wn]n7I4z;F?J41
+!s105 control_sv_unit
+S1
+R0
+R17
+Z28 8/eecs/home/aali02/rv32i-core/project/pd4/design/code/control.sv
+Z29 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/control.sv
+!i122 12
+L0 13 170
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+Xcontrol_sv_unit
+R1
+R16
+VXI1ODK_18Y8Wc7X]j?:SW3
+r1
+!s85 0
+!i10b 1
+!s100 h^4BFWiDd0AS9=PNIEY570
+IXI1ODK_18Y8Wc7X]j?:SW3
+!i103 1
+S1
+R0
+R17
+R28
+R29
+R14
+!i122 12
+R15
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vdecode
+R1
+DXx4 work 14 decode_sv_unit 0 22 YBoXVD>[;oX]jVH^PJ8TV0
+R16
+R3
+r1
+!s85 0
+!i10b 1
+!s100 D70^]bI<z[>6oID;86FO_2
+IKU]7WK4>4eVKB;4gQ@jb81
+!s105 decode_sv_unit
+S1
+R0
+R17
+Z30 8/eecs/home/aali02/rv32i-core/project/pd4/design/code/decode.sv
+Z31 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/decode.sv
+!i122 12
+L0 11 67
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+Xdecode_sv_unit
+R1
+R16
+VYBoXVD>[;oX]jVH^PJ8TV0
+r1
+!s85 0
+!i10b 1
+!s100 ?o0Q8?hMeG_TUd^]L@Ckb3
+IYBoXVD>[;oX]jVH^PJ8TV0
+!i103 1
+S1
+R0
+R17
+R30
+R31
+R14
+!i122 12
+R15
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vdesign_wrapper
+R1
+R23
+!i10b 1
+!s100 5cQDkom59MIRY^N[Yd`Nl1
+R24
+IJzjf6a9g_;5=LDC8h9nS70
+R3
+R25
+S1
+R0
+w1757344351
+8/eecs/home/aali02/rv32i-core/project/pd4/design/design_wrapper.sv
+F/eecs/home/aali02/rv32i-core/project/pd4/design/design_wrapper.sv
+!i122 18
+L0 6 10
+R7
+r1
+!s85 0
+31
+R27
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vfetch
+R1
+R23
+!i10b 1
+!s100 Oi6Re_EMQgLjU?MLM[MK?1
+R24
+I=coh2[52d4mMk3kYiHOIZ2
+R3
+R25
+S1
+R0
+R17
+Z32 8/eecs/home/aali02/rv32i-core/project/pd4/design/code/fetch.sv
+Z33 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/fetch.sv
+!i122 18
+L0 19 41
+R7
+r1
+!s85 0
+31
+R27
+R21
+R22
+!i113 1
+R11
+R12
+R13
+Xfetch_sv_unit
+R1
+R16
+Vd=L7JomknmfJmNkbgefW=3
+r1
+!s85 0
+!i10b 1
+!s100 L84;WY<F0Vo5[GI1D::J<1
+Id=L7JomknmfJmNkbgefW=3
+!i103 1
+S1
+R0
+R17
+R32
+R33
+R14
+!i122 12
+R15
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vigen
+R1
+DXx4 work 12 igen_sv_unit 0 22 ILgZAYXT80D7]7QhL=P8z1
+R16
+R3
+r1
+!s85 0
+!i10b 1
+!s100 F99IhC2H8=mIZWz`TX07m3
+IXXYoF16C_OI;UYhNYPcT=1
+!s105 igen_sv_unit
+S1
+R0
+R17
+Z34 8/eecs/home/aali02/rv32i-core/project/pd4/design/code/igen.sv
+Z35 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/igen.sv
+!i122 12
+L0 9 53
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+Xigen_sv_unit
+R1
+R16
+VILgZAYXT80D7]7QhL=P8z1
+r1
+!s85 0
+!i10b 1
+!s100 AN3]bmDK^Nm4MDgMKeAPC3
+IILgZAYXT80D7]7QhL=P8z1
+!i103 1
+S1
+R0
+R17
+R34
+R35
+R14
+!i122 12
+R15
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vmemory
+R1
+R16
+!i10b 1
+!s100 93i;A:9`nkM7AO@LQj>=?1
+R24
+I_Fk_=0]<JKNdAJ;SP8f]E3
+R3
+S1
+R0
+R26
+8/eecs/home/aali02/rv32i-core/project/pd4/design/code/memory.sv
+F/eecs/home/aali02/rv32i-core/project/pd4/design/code/memory.sv
+!i122 12
+L0 20 78
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vpd4
+R1
+DXx4 work 11 pd4_sv_unit 0 22 9@`_0Z]ACNHm?<7dHdSPB3
+R16
+R3
+r1
+!s85 0
+!i10b 1
+!s100 d00_TLiO?0c=O_18=GSgj0
+I0iO79a<^TCZ<5M1L_B^;A0
+!s105 pd4_sv_unit
+S1
+R0
+R26
+Z36 8/eecs/home/aali02/rv32i-core/project/pd4/design/code/pd4.sv
+Z37 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/pd4.sv
+!i122 12
+L0 13 288
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+Xpd4_sv_unit
+R1
+R16
+V9@`_0Z]ACNHm?<7dHdSPB3
+r1
+!s85 0
+!i10b 1
+!s100 5PTN1iR]Lml2_BZ4J0[nI1
+I9@`_0Z]ACNHm?<7dHdSPB3
+!i103 1
+S1
+R0
+R26
+R36
+R37
+R14
+!i122 12
+R15
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vregister_file
+R1
+DXx4 work 21 register_file_sv_unit 0 22 OBYDJdXXQTelnX1hL9ONJ0
+R16
+R3
+r1
+!s85 0
+!i10b 1
+!s100 GFmmOGnGEa29JzD3;l:[;2
+Idiz]9d=9ZzJ07M7n9NZG63
+!s105 register_file_sv_unit
+S1
+R0
+R17
+Z38 8/eecs/home/aali02/rv32i-core/project/pd4/design/code/register_file.sv
+Z39 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/register_file.sv
+!i122 12
+L0 12 44
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+Xregister_file_sv_unit
+R1
+R16
+VOBYDJdXXQTelnX1hL9ONJ0
+r1
+!s85 0
+!i10b 1
+!s100 ^l9h`WzGE:gO9Yi5EcQZ_1
+IOBYDJdXXQTelnX1hL9ONJ0
+!i103 1
+S1
+R0
+R17
+R38
+R39
+R14
+!i122 12
+R15
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vtop
+R1
+R23
+!i10b 1
+!s100 z]DAh1`oLdfK<zdLgOSd]0
+R24
+I=oh0MD>nc9]nGIeQNo`8;3
+R3
+R25
+S1
+R0
+R17
+8/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/test_pd.sv
+F/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/test_pd.sv
+F/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/tracegen.v
+F/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/fields.h
+F/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/trace_dump.h
+F/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/pattern_dump.h
+F/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/pattern_check.h
+F/eecs/home/aali02/rv32i-core/project/pd4/verif/tests/tasks.h
+!i122 18
+L0 4 469
+R7
+r1
+!s85 0
+31
+R27
+R21
+R22
+!i113 1
+R11
+R12
+R13
+vwriteback
+R1
+DXx4 work 17 writeback_sv_unit 0 22 =EDE3J>:=ViQ240l0kSR^0
+R16
+R3
+r1
+!s85 0
+!i10b 1
+!s100 OSWTY?RGFnd`F0BAT@bH^2
+IJHClj[SI[Q6PUFIYU[Z111
+!s105 writeback_sv_unit
+S1
+R0
+R26
+Z40 8/eecs/home/aali02/rv32i-core/project/pd4/design/code/writeback.sv
+Z41 F/eecs/home/aali02/rv32i-core/project/pd4/design/code/writeback.sv
+!i122 12
+L0 19 46
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13
+Xwriteback_sv_unit
+R1
+R16
+V=EDE3J>:=ViQ240l0kSR^0
+r1
+!s85 0
+!i10b 1
+!s100 ROXCfi3L[^]:AMhR:mYh33
+I=EDE3J>:=ViQ240l0kSR^0
+!i103 1
+S1
+R0
+R26
+R40
+R41
+R14
+!i122 12
+R15
+R7
+31
+R20
+R21
+R22
+!i113 1
+R11
+R12
+R13

@@ -4,6 +4,4 @@ memory.sv
 fetch.sv
 control.sv
 decode.sv
-register_file.sv
-execute.sv
 pd3.sv

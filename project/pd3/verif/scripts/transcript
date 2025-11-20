@@ -1,5 +1,5 @@
 # vsim -suppress 3839 -c -do "/eecs/home/aali02/rv32i-core/project/pd3/verif/scripts/run.macro" /eecs/home/aali02/rv32i-core/project/pd3/work.top 
-# Start time: 23:49:15 on Oct 26,2025
+# Start time: 19:44:05 on Nov 09,2025
 # Loading sv_std.std
 # Loading /eecs/home/aali02/rv32i-core/project/pd3/work.top
 # Loading /eecs/home/aali02/rv32i-core/project/pd3/work.clockgen
@@ -48678,5 +48678,5 @@
 # IMEMORY: OOB read @0x0578d7b2 (mapped 0x0478d7b2)
 # ** Note: $finish    : /eecs/home/aali02/rv32i-core/project/pd3/verif/tests/clockgen.sv(26)
 #    Time: 100001 ps  Iteration: 1  Instance: /top/clkg
-# End time: 23:49:22 on Oct 26,2025, Elapsed time: 0:00:07
+# End time: 19:44:10 on Nov 09,2025, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0

@@ -1,0 +1,3 @@
+- V e r i l a t i o n   R e p o r t: Verilator 5.042 2025-11-02 rev UNKNOWN.REV
+- Verilator: Built from 0.703 MB sources in 15 modules, into 0.263 MB in 10 C++ files needing 0.007 MB
+- Verilator: Walltime 0.069 s (elab=0.009, cvt=0.034, bld=0.000); cpu 0.046 s on 1 threads
