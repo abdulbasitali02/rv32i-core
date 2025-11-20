@@ -1,4 +1,4 @@
-reg[128 * 4 - 1:0] pattern          [0:`PATTERN_LINE_COUNT-1];
+reg[128 * 6 - 1:0] pattern          [0:`PATTERN_LINE_COUNT-1];
 initial begin:pre_check
   integer res;
   $readmemh(`PATTERN_FILE, pattern);
