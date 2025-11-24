@@ -68,13 +68,14 @@ function automatic logic addr_in_range(input logic [AWIDTH-1:0] addr);
         return addr_in_range;
     end
 
-    if (addr >= IMEM_BASE_ADDR) begin
-        offset = addr - IMEM_BASE_ADDR;
-        if (offset <= AWIDTH'(MAX_VALID_OFFSET)) begin
-            addr_in_range = 1'b1;
-        end
+    // Map the incoming address into a memory offset and check bounds. This
+    // allows addresses below the base to access the same backing storage by
+    // treating them as already-relative offsets.
+    offset = to_offset(addr);
+    if (offset <= AWIDTH'(MAX_VALID_OFFSET)) begin
+        addr_in_range = 1'b1;
     end
-endfunction 
+endfunction
 
 function automatic logic [AWIDTH-1:0] to_offset(input logic [AWIDTH-1:0] addr);
     // Wrap around the base address so both absolute and offset addresses map
