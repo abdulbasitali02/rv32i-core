@@ -15,6 +15,8 @@ module decode #(
 	// inputs
 	input logic clk,
 	input logic rst,
+    input logic stall_i,
+    input logic flush_i,
 	input logic [DWIDTH-1:0] insn_i,
 	input logic [AWIDTH-1:0] pc_i,
 
@@ -45,9 +47,14 @@ module decode #(
         if (rst) begin
             pc_q <= AWIDTH'(IMEM_BASE_ADDR);
             insn_q <= INSN_NOP; // NOP instruction
-        end else begin
-            pc_q <= pc_i;
-            insn_q <= insn_i;
+        end else if (!stall_i) begin
+            if (flush_i) begin
+                pc_q   <= pc_i;
+                insn_q <= INSN_NOP;
+            end else begin
+                pc_q   <= pc_i;
+                insn_q <= insn_i;
+            end
         end
     end
 

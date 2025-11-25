@@ -24,6 +24,8 @@ module fetch #(
 	// inputs
 	input logic clk,
 	input logic rst,
+    input logic stall_i,
+    input logic flush_i,
     input logic pcsel_i,
     input logic [AWIDTH-1:0] pc_branch_i,
     input logic [AWIDTH-1:0] next_pc_i,
@@ -47,9 +49,13 @@ always_ff @(posedge clk) begin
     if (rst) begin
         pc_q <= RESET_PC;
         insn_q <= INSN_NOP;
-    end else begin
+    end else if (!stall_i) begin
         pc_q <= pc_d;
-        insn_q <= insn_mem_i;
+        if (flush_i) begin
+            insn_q <= INSN_NOP;
+        end else begin
+            insn_q <= insn_mem_i;
+        end
     end
 end
 

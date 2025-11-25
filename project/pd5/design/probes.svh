@@ -2,7 +2,7 @@
 `define PROBE_F_PC          if_pc
 `define PROBE_F_INSN        if_insn
 
-`define PROBE_D_PC          id_pc
+`define PROBE_D_PC          idex_pc
 `define PROBE_D_OPCODE      id_opcode
 `define PROBE_D_RD          id_rd
 `define PROBE_D_FUNCT3      id_funct3
@@ -22,16 +22,16 @@
 
 `define PROBE_E_PC                id_pc
 `define PROBE_E_ALU_RES           ex_alu_res
-`define PROBE_E_BR_TAKEN          ex_br_taken
+`define PROBE_E_BR_TAKEN          branch_taken_ex
 
-`define PROBE_M_PC                id_pc
+`define PROBE_M_PC                exmem_pc
 `define PROBE_M_ADDRESS           dmem_addr
-`define PROBE_M_SIZE_ENCODED      id_funct3
+`define PROBE_M_SIZE_ENCODED      exmem_funct3
 `define PROBE_M_DATA              dmem_wdata
 
-`define PROBE_W_PC                id_pc
-`define PROBE_W_ENABLE            id_regwren
-`define PROBE_W_DESTINATION       id_rd
+`define PROBE_W_PC                memwb_pc
+`define PROBE_W_ENABLE            memwb_regwren
+`define PROBE_W_DESTINATION       memwb_rd
 `define PROBE_W_DATA              wb_data
 
 // ----  Probes  ----
