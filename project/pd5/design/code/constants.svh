@@ -15,7 +15,7 @@ parameter logic [31:0] ZERO = 32'd0;
 
  parameter logic [31:0] INSN_NOP        = 32'h00000013;
 parameter logic [31:0] IMEM_BASE_ADDR  = 32'h01000000;
-parameter logic [31:0] STACK_POINTER_INIT = 32'h0110_0000;
+parameter logic [31:0] STACK_POINTER_INIT = IMEM_BASE_ADDR + 32'h00100000;
 
 // RISC-V 32I opcode mapping
 parameter logic [6:0] OPCODE_OP        = 7'b0110011;      // R-type ops
